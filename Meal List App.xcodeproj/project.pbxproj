@@ -8,17 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		AF0D3C2C2A78F5C9003C48AC /* Meal_List_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D3C2B2A78F5C9003C48AC /* Meal_List_AppApp.swift */; };
-		AF0D3C2E2A78F5C9003C48AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D3C2D2A78F5C9003C48AC /* ContentView.swift */; };
+		AF0D3C2E2A78F5C9003C48AC /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D3C2D2A78F5C9003C48AC /* MealListView.swift */; };
 		AF0D3C302A78F5CA003C48AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0D3C2F2A78F5CA003C48AC /* Assets.xcassets */; };
 		AF0D3C332A78F5CA003C48AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0D3C322A78F5CA003C48AC /* Preview Assets.xcassets */; };
+		AF0D3C3D2A78F728003C48AC /* Meal Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D3C3C2A78F728003C48AC /* Meal Model.swift */; };
+		AF0D3C3F2A78F82A003C48AC /* MealVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D3C3E2A78F82A003C48AC /* MealVM.swift */; };
+		AF0D3C452A78FFC9003C48AC /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = AF0D3C442A78FFC9003C48AC /* SDWebImageSwiftUI */; };
+		AF0D3C472A790C9A003C48AC /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D3C462A790C9A003C48AC /* MealDetailView.swift */; };
+		AF0D3C4A2A793E03003C48AC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0D3C492A793E03003C48AC /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AF0D3C282A78F5C9003C48AC /* Meal List App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal List App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF0D3C2B2A78F5C9003C48AC /* Meal_List_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal_List_AppApp.swift; sourceTree = "<group>"; };
-		AF0D3C2D2A78F5C9003C48AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF0D3C2D2A78F5C9003C48AC /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
 		AF0D3C2F2A78F5CA003C48AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0D3C322A78F5CA003C48AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF0D3C3C2A78F728003C48AC /* Meal Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal Model.swift"; sourceTree = "<group>"; };
+		AF0D3C3E2A78F82A003C48AC /* MealVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealVM.swift; sourceTree = "<group>"; };
+		AF0D3C462A790C9A003C48AC /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		AF0D3C492A793E03003C48AC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF0D3C452A78FFC9003C48AC /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +61,11 @@
 		AF0D3C2A2A78F5C9003C48AC /* Meal List App */ = {
 			isa = PBXGroup;
 			children = (
+				AF0D3C482A793DDC003C48AC /* Helper */,
+				AF0D3C3B2A78F622003C48AC /* ViewModel */,
+				AF0D3C3A2A78F61D003C48AC /* View */,
+				AF0D3C392A78F617003C48AC /* Model */,
 				AF0D3C2B2A78F5C9003C48AC /* Meal_List_AppApp.swift */,
-				AF0D3C2D2A78F5C9003C48AC /* ContentView.swift */,
 				AF0D3C2F2A78F5CA003C48AC /* Assets.xcassets */,
 				AF0D3C312A78F5CA003C48AC /* Preview Content */,
 			);
@@ -65,6 +78,39 @@
 				AF0D3C322A78F5CA003C48AC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF0D3C392A78F617003C48AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF0D3C3C2A78F728003C48AC /* Meal Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF0D3C3A2A78F61D003C48AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF0D3C2D2A78F5C9003C48AC /* MealListView.swift */,
+				AF0D3C462A790C9A003C48AC /* MealDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF0D3C3B2A78F622003C48AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF0D3C3E2A78F82A003C48AC /* MealVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AF0D3C482A793DDC003C48AC /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AF0D3C492A793E03003C48AC /* Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +129,9 @@
 			dependencies = (
 			);
 			name = "Meal List App";
+			packageProductDependencies = (
+				AF0D3C442A78FFC9003C48AC /* SDWebImageSwiftUI */,
+			);
 			productName = "Meal List App";
 			productReference = AF0D3C282A78F5C9003C48AC /* Meal List App.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +160,9 @@
 				Base,
 			);
 			mainGroup = AF0D3C1F2A78F5C9003C48AC;
+			packageReferences = (
+				AF0D3C432A78FFC9003C48AC /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = AF0D3C292A78F5C9003C48AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF0D3C2E2A78F5C9003C48AC /* ContentView.swift in Sources */,
+				AF0D3C2E2A78F5C9003C48AC /* MealListView.swift in Sources */,
+				AF0D3C3F2A78F82A003C48AC /* MealVM.swift in Sources */,
 				AF0D3C2C2A78F5C9003C48AC /* Meal_List_AppApp.swift in Sources */,
+				AF0D3C4A2A793E03003C48AC /* Extension.swift in Sources */,
+				AF0D3C472A790C9A003C48AC /* MealDetailView.swift in Sources */,
+				AF0D3C3D2A78F728003C48AC /* Meal Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF0D3C432A78FFC9003C48AC /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF0D3C442A78FFC9003C48AC /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF0D3C432A78FFC9003C48AC /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF0D3C202A78F5C9003C48AC /* Project object */;
 }

@@ -6,24 +6,36 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
-struct ContentView: View {
+struct MealListView: View {
     @StateObject var mealVM =  MealVM()
     var body: some View {
         NavigationView{
-            VStack {
-                List(){
-                    Text("Range user age between 0 - 10 = \(VM.a) users")
-                    Text("Range user age between 11 - 20 = \(VM.b) users")
-                    Text("Range user age between 21 - 30 = \(VM.c) users")
-                    Text("Range user age between 31 - \(VM.maxAge) = \(VM.d) users")
+            List(){
+                ForEach(mealVM.fetchedMealData, id: \.idMeal){ data in
+                    if !data.strMeal.isEmpty && !data.strMealThumb.isEmpty{
+                        NavigationLink(destination: MealDetailView(mealVM: mealVM)
+                            .navigationTitle("Detail Meal")
+                            .navigationBarTitleDisplayMode(.large)){
+                                HStack(spacing: 10){
+                                    WebImage(url: URL(string: data.strMealThumb))
+                                        .resizable() // Resizable like SwiftUI.Image
+                                        .scaledToFit()
+                                        .frame(width: 100, height: 100)
+                                    
+                                    Text(data.strMeal)
+                                        .font(.title3)
+                                        .fontWeight(.semibold)
+                                }
+                            }
+                    }else{
+                        Text("There is no data")
+                    }
                 }
-                
-                
             }
             .onAppear(){
                 mealVM.fetchMealData()
-                //            VM.calculateAge()
             }
             .navigationTitle("Meal's List")
         }
